@@ -5,8 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export let name="";
-export let email="";
+export let name = "";
+export let email = "";
 root.render(
   <React.StrictMode>
     <App />
