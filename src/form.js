@@ -1,27 +1,23 @@
-// Form.js
-import React from 'react';
+import { name, email } from "./HomePage";
 
-const Form = ({ name, email }) => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert('Form submitted!');
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name:</label>
-        <input type="text" value={name} onChange={() => {}} />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={() => {}} />
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  );
-};
+function handleSubmit(e) {
+  e.preventDefault();
+}
+const Form = () => (
+  <>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h3>Login Page</h3>
+        <input type="text" placeholder="Name" value={name} />
+        <br />
+        <br />
+        <input type="email" placeholder="Email" value={email} />
+        <br />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </>
+);
 
 export default Form;
